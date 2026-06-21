@@ -1,0 +1,81 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        45deg,
+        #ff0080,
+        #ff00ff,
+        #00ffff,
+        #00ff88,
+        #ffff00
+    );
+
+    background-size:400% 400%;
+    animation:fundo 6s infinite alternate;
+
+    overflow:hidden;
+}
+
+h1{
+    font-family:'Pacifico', cursive;
+    font-size:7rem;
+    color:white;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff00ff,
+        0 0 40px #00ffff;
+
+    margin-bottom:30px;
+
+
+}
+
+button{
+    padding:15px 30px;
+    font-size:1.2rem;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.coracao{
+    position:absolute;
+    font-size:30px;
+    animation:subir 4s linear forwards;
+}
+
+@keyframes subir{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-800px) rotate(720deg);
+        opacity:0;
+    }
+}
+
+@keyframes fundo{
+    0%{
+        background-position:left;
+    }
+
+    100%{
+        background-position:right;
+    }
+}
